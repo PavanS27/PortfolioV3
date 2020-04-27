@@ -1,4 +1,4 @@
 ---
 layout: resume
-permalink: /{{site.baseurl}}/resume/
+permalink: /resume/
 ---
