@@ -1,0 +1,508 @@
+<html>
+  <head>
+    <title>Resume | Pavan Srikanth</title>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Pavan Srikanth | Web Developer &amp; UX Enthusiast</title>
+
+    <meta property="og:title" content="Resume | Pavan Srikanth" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Catamaran:200,300,400,500,600,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="content"></div>
+    <script src="https://fb.me/react-0.14.6.js"></script>
+    <script src="https://fb.me/react-dom-0.14.6.js"></script>
+    <script src="https://unpkg.com/react@0.12.1/dist/JSXTransformer.js"></script>
+    <script type="text/jsx">
+
+      var DATA = {
+        name: "Hey, I'm Pavan",
+        subtext: "Developer & designer based in Bangalore, Karnataka",
+
+        twitterURL: '',
+        instaURL: 'https://www.instagram.com/_i_pavan_i_/',
+        githubURL: 'https://github.com/PavanS27',
+        linkedinURL: '',
+        resumeURL: ''
+      }
+
+      var App = React.createClass({
+        render: function() {
+          return(
+            <div className="app">
+              <Left
+                name={this.props.profileData.name}
+                subtext={this.props.profileData.subtext}
+
+                twitterURL={this.props.profileData.twitterURL}
+                instaURL={this.props.profileData.instaURL}
+                githubURL={this.props.profileData.githubURL}
+                linkedinURL={this.props.profileData.linkedinURL}
+              />
+              <Right
+                intro={this.props.profileData.intro}
+                resumeURL={this.props.profileData.resumeURL}
+              />
+            </div>
+          );
+        }
+      });
+
+      var Left = React.createClass({
+        render: function() {
+          return(
+            <div className="left">
+              <div className="bg-img"></div>
+              <div className="left-inner">
+                <div className="info">
+                  <h2 className="name">{this.props.name}</h2>
+                  <div className="subtext">{this.props.subtext}</div>
+
+                  <div className="social-links">
+                    <a href={this.props.twitterURL} target="_blank"><i className="fa fa-twitter"></i></a>
+                    <a href={this.props.instaURL} target="_blank"><i className="fa fa-instagram"></i></a>
+                    <a href={this.props.githubURL} target="_blank"><i className="fa fa-github"></i></a>
+                    <a href={this.props.linkedinURL}  target="_blank"><i className="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        }
+      });
+
+      var Right = React.createClass({
+        render: function() {
+          return(
+            <div className="right">
+              <div className="right-inner">
+                <div className="introduction">
+                  <h4>Intro</h4>
+                  <div className="content">
+                    <p className="intro-p">I&#39;m currently in my second year (out of four) studying computer science engineering at University Visveswaraya College of Engg.</p>
+                    <p className="intro-p">I enjoy being the bridge between engineering and design, and feel right at home as a front end engineer. I&#39;m experienced in developing and designing products for the web, from simple landing pages to full-fledged web apps.</p>
+
+                  </div>
+                </div>
+                <div className="skills">
+                  <h4>Skills</h4>
+                  <div className="content">
+                    <div className="skill-category">
+                      <strong>Languages: &nbsp;</strong>
+                      <span>JavaScript (ES6), HTML5, CSS3, Java, C++, C</span>
+                    </div>
+                    <div className="skill-category">
+                      <strong>Libraries &amp; Frameworks: &nbsp;</strong>
+                      <span>jQuery, Bootstrap,  React, React Native, Django, Node, Angular</span>
+                    </div>
+                    <div className="skill-category">
+                      <strong>Tools: &nbsp;</strong>
+                      <span>Git &amp; Github, Command Line, Postman, Expo Devtools</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="education">
+                  <h4>Education</h4>
+                  <div className="content">
+                    <div className="university"><a href="https://uvce.ac.in/" target="_blank">UVCE</a></div>
+
+                    <div className="grad-date">Expected Graduation: May 2022</div>
+                  </div>
+                </div>
+                <div className="experience">
+                  <h4>Experience</h4>
+                  <div className="content">
+                    <div className="exp-item">
+                      <div className="job">
+                        <a className="company" href="https://starry.com/" target="_blank">BlAnk</a>
+                        <div className="duration">Blank</div>
+                      </div>
+                      <div className="title">Blank</div>
+                      <ul className="description">
+                        <li>Blank</li>
+                        <li>Blank</li>
+                        <li>Blank</li>
+                      </ul>
+                    </div>
+                    <div className="exp-item">
+                      <div className="job">
+                        <a className="company" href="http://us.mullenlowe.com/" target="_blank">Blank</a>
+                        <div className="duration">Blank</div>
+                      </div>
+                      <div className="title">Blank</div>
+                      <ul className="description">
+                        <li>Blank</li>
+                        <li>Blank</li>
+                        <li>Blank</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="projects">
+                  <h4>Projects</h4>
+                  <div className="content">
+                    <div className="project-item">
+                      <a className="project-title" href="" target="_blank">IFS</a>
+                      <p className="project-desc">A Webathon Project which helps senior citizens on teaching how to use mobile apps</p>
+                    </div>
+                    <div className="project-item">
+                      <div className="project-title">Cycles</div>
+                      <p className="project-desc">A Hackathon project which helps in solving the current E-commerce shopping dilemma</p>
+                    </div>
+                    <div className="project-item">
+                      <a className="project-title" href="" target="_blank">UVCE Diaries</a>
+                      <p className="project-desc">A project which helps students of our college to update themselves on daily basis of college current affairs and project building for juniors</p>
+                    </div>
+
+                  </div>
+                </div>
+                <a className="resume" href={this.props.resumeURL} target="_blank"><div className="resume-link">Grab a PDF of my full resume</div></a>
+              </div>
+            </div>
+          );
+        }
+      });
+
+      ReactDOM.render(
+        <App profileData={DATA}/>,
+        document.getElementById('content')
+      );
+    </script>
+  </body>
+  <style>
+    html,
+    body {
+      font-family: Helvetica;
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      font-family: "Catamaran", sans-serif;
+      letter-spacing: 0.3px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .left,
+    .right {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .left {
+      color: #efefef;
+      width: 50%;
+      height: 100%;
+      float: left;
+      text-align: center;
+      overflow: hidden;
+      position: fixed;
+    }
+
+    .left .bg-img {
+      background: url("/assets/images/14446222_1057052997746086_2395869301610566359_n.jpg")
+        center center no-repeat;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .left .bg-img:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: #185a9d;
+      background-image: linear-gradient(to left top, #43cea2, #185a9d);
+      opacity: 0.85;
+    }
+
+    .left-inner,
+    .right-inner {
+      padding: 50px;
+    }
+
+    @media screen and (max-width: 400px) {
+      .left-inner,
+      .right-inner {
+        padding: 40px;
+      }
+    }
+
+    .left-inner {
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      min-height: 24em;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .left .info {
+      -webkit-box-flex: 0;
+      -webkit-flex: none;
+      flex: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      color: #fff;
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 50%;
+    }
+
+    @media screen and (max-width: 1000px) {
+      .left .info {
+        margin-top: 300px;
+      }
+    }
+
+    .left .info .name {
+      font-weight: 500;
+    }
+
+    .left .info .social-links {
+      margin-top: 30px;
+    }
+
+    .left .info .fa {
+      margin: 10px;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    @media screen and (max-width: 1000px) {
+      .left,
+      .right {
+        display: block;
+        width: 100%;
+      }
+      .left {
+        position: static;
+      }
+    }
+
+    .right {
+      float: right;
+    }
+
+    .right a {
+      color: #000;
+    }
+
+    .right h4,
+    .right .content {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .right h4 {
+      width: 20%;
+      margin: 0 0 20px;
+      text-transform: uppercase;
+      font-size: 14px;
+      background-color: #2a54f5;
+      background-image: -webkit-linear-gradient(
+        45deg,
+        #2a54f5 0%,
+        #33e5bb 100%
+      );
+      background-image: linear-gradient(45deg, #2a54f5 0%, #33e5bb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .right ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .right .content {
+      width: 80%;
+      padding: 0;
+      margin: 0 0 50px;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    @media screen and (max-width: 600px) {
+      .right h4,
+      .right .content {
+        display: block;
+        vertical-align: top;
+        width: 100%;
+      }
+    }
+
+    .right .content ul.description {
+      padding-left: 20px;
+      margin-top: 10px;
+      font-size: 15px;
+    }
+
+    .right .introduction .intro-p:first-of-type {
+      margin-top: 0;
+    }
+
+    .right .introduction .job-pls {
+      font-weight: 500;
+      background-color: #2a54f5;
+      background-image: -webkit-linear-gradient(
+        45deg,
+        #2a54f5 0%,
+        #33e5bb 100%
+      );
+      background-image: linear-gradient(45deg, #2a54f5 0%, #33e5bb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .right .skills .skill-category {
+      margin-bottom: 10px;
+    }
+
+    .right .skills .skill-category:last-of-type {
+      margin-bottom: 0px;
+    }
+
+    .right .skills .skill-category > strong {
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .right .education {
+      font-size: 16px;
+    }
+
+    .right .education .university {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .right .education .college {
+      font-weight: 700;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .right .education .grad-date {
+      text-transform: uppercase;
+      color: #aaa;
+      font-size: 13px;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+
+    .right .experience .exp-item {
+      margin-bottom: 30px;
+    }
+
+    .right .experience .exp-item:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .right .experience .exp-item .job {
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .right .experience .exp-item .duration {
+      font-size: 13px;
+      font-weight: 500;
+      float: right;
+      color: #aaa;
+      text-transform: uppercase;
+      position: relative;
+      top: 1px;
+      margin-bottom: 5px;
+    }
+
+    @media screen and (max-width: 340px) {
+      .right .experience .exp-item .duration {
+        float: none;
+      }
+    }
+
+    .right .experience .exp-item .title {
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    .right .projects .project-item {
+      margin-bottom: 20px;
+    }
+
+    .right .projects .project-title {
+      font-weight: 700;
+    }
+
+    .right .projects .project-desc {
+      font-size: 15px;
+      margin: 0 0 10px;
+    }
+
+    .right a.resume {
+      display: block;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 15px 0px;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .right a.resume:hover {
+      background-color: #f1f1f1;
+    }
+
+    .right a.resume .resume-link {
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: uppercase;
+      background-color: #2a54f5;
+      background-image: -webkit-linear-gradient(
+        45deg,
+        #2a54f5 0%,
+        #33e5bb 100%
+      );
+      background-image: linear-gradient(45deg, #2a54f5 0%, #33e5bb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</html>
