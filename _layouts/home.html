@@ -28,7 +28,7 @@
       href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+
     <title>Pavan Srikanth | Front End Software Engineer</title>
   </head>
   <body>
@@ -347,89 +347,72 @@
     <section class="workbg" id="Work">
       <h2 class="workheader">Some of My Work</h2>
       <hr class="linebreak3" />
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img
-              src="{{ site.baseurl }}/assets/images/Screenshot (150).png"
-              alt=""
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="{{ site.baseurl }}/assets/images/Screenshot (151).png"
-              alt=""
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="{{ site.baseurl }}/assets/images/Screenshot (152).png"
-              alt=""
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="{{ site.baseurl }}/assets/images/Screenshot (153).png"
-              alt=""
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="{{ site.baseurl }}/assets/images/Screenshot (154).png"
-              alt=""
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="{{ site.baseurl }}/assets/images/Screenshot (155).png"
-              alt=""
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="{{ site.baseurl }}/assets/images/Screenshot (156).png"
-              alt=""
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="{{ site.baseurl }}/assets/images/Screenshot (157).png"
-              alt=""
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="{{ site.baseurl }}/assets/images/Screenshot (181).png"
-              alt=""
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="{{ site.baseurl }}/assets/images/Screenshot (186).png"
-              alt=""
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="{{ site.baseurl }}/assets/images/Screenshot (187).png"
-              alt=""
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="{{ site.baseurl }}/assets/images/Screenshot (188).png"
-              alt=""
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="{{ site.baseurl }}/assets/images/Screenshot (189).png"
-              alt=""
-            />
-          </div>
-        </div>
-
-        <div class="swiper-pagination"></div>
+      <div class="box">
+        <span style="--i: 1;"
+          ><img
+            src="{{ site.baseurl }}/assets/images/Screenshot (150).png"
+            alt=""
+        /></span>
+        <span style="--i: 2;"
+          ><img
+            src="{{ site.baseurl }}/assets/images/Screenshot (151).png"
+            alt=""
+        /></span>
+        <span style="--i: 3;"
+          ><img
+            src="{{ site.baseurl }}/assets/images/Screenshot (152).png"
+            alt=""
+        /></span>
+        <span style="--i: 4;"
+          ><img
+            src="{{ site.baseurl }}/assets/images/Screenshot (153).png"
+            alt=""
+        /></span>
+        <span style="--i: 5;"
+          ><img
+            src="{{ site.baseurl }}/assets/images/Screenshot (154).png"
+            alt=""
+        /></span>
+        <span style="--i: 6;"
+          ><img
+            src="{{ site.baseurl }}/assets/images/Screenshot (155).png"
+            alt=""
+        /></span>
+        <span style="--i: 7;"
+          ><img
+            src="{{ site.baseurl }}/assets/images/Screenshot (156).png"
+            alt=""
+        /></span>
+        <span style="--i: 8;"
+          ><img
+            src="{{ site.baseurl }}/assets/images/Screenshot (157).png"
+            alt=""
+        /></span>
+        <span style="--i: 9;"
+          ><img
+            src="{{ site.baseurl }}/assets/images/Screenshot (181).png"
+            alt=""
+        /></span>
+        <span style="--i: 10;"
+          ><img
+            src="{{ site.baseurl }}/assets/images/Screenshot (186).png"
+            alt=""
+        /></span>
+        <span style="--i: 11;"
+          ><img
+            src="{{ site.baseurl }}/assets/images/Screenshot (187).png"
+            alt=""
+        /></span>
+        <span style="--i: 12;"
+          ><img
+            src="{{ site.baseurl }}/assets/images/Screenshot (188).png"
+            alt=""
+        /></span>
+        <span style="--i: 13;"
+          ><img
+            src="{{ site.baseurl }}/assets/images/Screenshot (189).png"
+            alt=""
+        /></span>
       </div>
     </section>
     <section class="contactbg" id="Contact">
@@ -491,6 +474,39 @@
     </section>
   </body>
   <style>
+    .box {
+      position: relative;
+      width: 300px;
+      height: 250px;
+      transform-style: preserve-3d;
+      animation: animate 40s linear infinite;
+    }
+    @keyframes animate {
+      0% {
+        transform: perspective(1000px) rotateY(0deg);
+      }
+      100% {
+        transform: perspective(1000px) rotateY(360deg);
+      }
+    }
+    .box span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+      transform-style: preserve-3d;
+      transform: rotateY(calc(var(--i) * 45deg)) translateZ(550px);
+    }
+    .box span img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
     html {
       width: 100%;
       margin: 0px;
@@ -502,25 +518,6 @@
       width: 100%;
       margin: 0px;
       scroll-behavior: smooth;
-    }
-
-    .swiper-container {
-      width: 100%;
-      height: 400px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-    .swiper-slide {
-      background-position: center;
-      background-size: cover;
-      width: 500px !important;
-      height: 400px;
-      background: #111;
-    }
-
-    .swiper-slide img {
-      width: 500px !important;
-      height: 400px;
     }
 
     .first {
@@ -1237,6 +1234,40 @@
     /* RESPONSIVE STYLE FORM HERE,,,, DONT GET CONFUSED */
 
     @media screen and (min-width: 350px) and (max-width: 399px) {
+      .box {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        transform-style: preserve-3d;
+        animation: animate1 20s linear infinite;
+        margin-top: 140px;
+      }
+      @keyframes animate1 {
+        0% {
+          transform: perspective(1000px) rotateX(0deg) rotateY(35deg);
+        }
+        100% {
+          transform: perspective(1000px) rotateX(360deg) rotateY(35deg);
+        }
+      }
+      .box span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateX(calc(var(--i) * 45deg)) translateZ(150px);
+      }
+      .box span img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
       .first {
         height: 2vh;
       }
@@ -1507,6 +1538,40 @@
       }
     }
     @media screen and (min-width: 300px) and (max-width: 349px) {
+      .box {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        transform-style: preserve-3d;
+        animation: animate1 20s linear infinite;
+        margin-top: 140px;
+      }
+      @keyframes animate1 {
+        0% {
+          transform: perspective(1000px) rotateX(0deg) rotateY(35deg);
+        }
+        100% {
+          transform: perspective(1000px) rotateX(360deg) rotateY(35deg);
+        }
+      }
+      .box span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateX(calc(var(--i) * 45deg)) translateZ(150px);
+      }
+      .box span img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
       .first {
         height: 2vh;
       }
@@ -1770,6 +1835,40 @@
       }
     }
     @media screen and (min-width: 350px) and (max-width: 399px) {
+      .box {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        transform-style: preserve-3d;
+        animation: animate1 20s linear infinite;
+        margin-top: 140px;
+      }
+      @keyframes animate1 {
+        0% {
+          transform: perspective(1000px) rotateX(0deg) rotateY(35deg);
+        }
+        100% {
+          transform: perspective(1000px) rotateX(360deg) rotateY(35deg);
+        }
+      }
+      .box span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateX(calc(var(--i) * 45deg)) translateZ(150px);
+      }
+      .box span img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
       .native {
         margin-left: 80px;
       }
@@ -2041,6 +2140,40 @@
       }
     }
     @media screen and (min-width: 400px) and (max-width: 766px) {
+      .box {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        transform-style: preserve-3d;
+        animation: animate1 20s linear infinite;
+        margin-top: 140px;
+      }
+      @keyframes animate1 {
+        0% {
+          transform: perspective(1000px) rotateX(0deg) rotateY(35deg);
+        }
+        100% {
+          transform: perspective(1000px) rotateX(360deg) rotateY(35deg);
+        }
+      }
+      .box span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateX(calc(var(--i) * 45deg)) translateZ(150px);
+      }
+      .box span img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
       .first {
         height: 5vh;
       }
@@ -2310,6 +2443,40 @@
     }
 
     @media screen and (min-width: 400px) and (max-width: 767px) and (min-height: 730px) and (max-height: 819px) {
+      .box {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        transform-style: preserve-3d;
+        animation: animate1 20s linear infinite;
+        margin-top: 140px;
+      }
+      @keyframes animate1 {
+        0% {
+          transform: perspective(1000px) rotateX(0deg) rotateY(35deg);
+        }
+        100% {
+          transform: perspective(1000px) rotateX(360deg) rotateY(35deg);
+        }
+      }
+      .box span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateX(calc(var(--i) * 45deg)) translateZ(150px);
+      }
+      .box span img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
       .native {
         margin-left: 92px;
       }
@@ -2574,6 +2741,14 @@
       }
     }
     @media screen and (min-width: 767px) and (max-width: 900px) {
+      .box {
+        width: 250px;
+      }
+
+      .box span {
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+      }
+
       .first {
         height: 22vh;
       }
@@ -2872,7 +3047,7 @@
     src="https://kit.fontawesome.com/c1f258d506.js"
     crossorigin="anonymous"
   ></script>
-  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script>
     const element = document.querySelector("#downicon");
@@ -2881,48 +3056,5 @@
     element1.classList.add("animated", "fadeInDown");
     const element2 = document.querySelector(".subtext");
     element2.classList.add("animated", "fadeInUp");
-  </script>
-  <script>
-    var slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {
-        slideIndex = 1;
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-      setTimeout(showSlides, 4000);
-    }
-  </script>
-  <script type="text/javascript">
-    var swiper = new Swiper(".swiper-container", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 20,
-        stretch: 0,
-        depth: 200,
-        modifier: 1,
-        slideShadows: true,
-      },
-      loop: true,
-      autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-      },
-    });
   </script>
 </html>
